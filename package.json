@@ -1,14 +1,13 @@
 {
   "name": "vue-ani-number",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.1",
   "license": "MIT",
-  "main": "dist/index.js",
-  "module": "dist/ani-number.esm.js",
+  "main": "dist/vue-ani-number.umd.js",
+  "module": "packages/components/index.ts",
   "types": "dist/index.d.ts",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name vue-ani-number ./packages/components/index.ts",
+    "build": "vue-cli-service build --target lib --name vue-ani-number ./packages/components/index.ts && tsc --emitDeclarationOnly -p tsconfig.json",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

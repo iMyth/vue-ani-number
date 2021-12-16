@@ -5,15 +5,15 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: "ani-number-item",
+  name: 'ani-number-item',
   props: {
     number: {
       type: Number,
-      default: () => 0,
-    },
+      default: () => 0
+    }
   },
   setup() {
     return {};
@@ -22,11 +22,11 @@ export default defineComponent({
   computed: {
     spanStyle() {
       return { transform: `translateY(-${this.number * 10}%)` };
-    },
-  },
+    }
+  }
 });
 </script>
 
 <style lang="less">
-@import "./ani-number-item.less";
+@import './ani-number-item.less';
 </style>

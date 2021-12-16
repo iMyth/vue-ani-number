@@ -1,25 +1,21 @@
 <template>
   <div class="ani-number-groups">
-    <AniNumberItem
-      v-for="(item, index) in childNumber"
-      :key="`label_${index}`"
-      :number="item"
-    />
+    <AniNumberItem v-for="(item, index) in childNumber" :key="index" :number="item" />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, nextTick, onMounted, watch, ref } from "vue";
-import AniNumberItem from "./ani-number-item.vue";
+import { defineComponent, nextTick, onMounted, watch, ref } from 'vue';
+import AniNumberItem from './ani-number-item.vue';
 
 export default defineComponent({
-  name: "vue-ani-number",
+  name: 'vue-ani-number',
   components: { AniNumberItem },
   props: {
     number: {
       type: Number,
-      default: 0,
-    },
+      default: 0
+    }
   },
 
   setup(props) {
@@ -32,7 +28,7 @@ export default defineComponent({
       }
 
       nextTick(() => {
-        childNumber.value = numStr.split("").map((p) => +p);
+        childNumber.value = numStr.split('').map((p) => +p);
       });
     };
 
@@ -49,12 +45,12 @@ export default defineComponent({
 
     return {
       childNumber,
-      animate,
+      animate
     };
-  },
+  }
 });
 </script>
 
 <style lang="less">
-@import "./ani-number-groups.less";
+@import './ani-number-groups.less';
 </style>

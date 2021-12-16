@@ -25,7 +25,9 @@
       "dom",
       "dom.iterable",
       "scripthost"
-    ]
+    ],
+    "declaration": true,
+    "outDir": "dist"
   },
   "include": [
     "packages/**/*.ts",
