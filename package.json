@@ -2,9 +2,13 @@
   "name": "vue-ani-number",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/ani-number.esm.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name vue-ani-number ./packages/components/index.ts",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -25,6 +29,8 @@
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.0.0",
+    "less": "^4.1.2",
+    "less-loader": "7.x",
     "lint-staged": "^9.5.0",
     "prettier": "^2.2.1",
     "typescript": "~4.1.5"
