@@ -5,6 +5,10 @@
   "main": "dist/vue-ani-number.common.js",
   "module": "dist/vue-ani-number.common.js",
   "types": "dist/index.d.ts",
+  "keywords": [
+    "vue 3",
+    "number animation"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build-package": "vue-cli-service build --target lib --name vue-ani-number ./packages/components/index.ts && tsc --emitDeclarationOnly -p tsconfig.json",
