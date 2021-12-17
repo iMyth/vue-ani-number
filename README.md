@@ -3,7 +3,7 @@
 A Vue 3 component, provide a convenient and light-weight number animation.
 ## Demo
 
-TBA
+![avatar](/examples/demo.gif)
 
 ### Requirements
 
