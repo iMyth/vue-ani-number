@@ -1,23 +1,61 @@
 # vue-ani-number
 
-## Project setup
+A Vue 3 component, provide a convenient and light-weight number animation.
+## Demo
+
+TBA
+
+### Requirements
+
+* vue.js 3.x
+
+### Installation
 ```
-yarn install
+yarn add vue-ani-number
 ```
 
-### Compiles and hot-reloads for development
+or 
 ```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
+npm install vue-ani-number
 ```
 
-### Lints and fixes files
+### Usage
+
+* use plugin
+``` ts
+import { createApp } from 'vue';
+import App from './App.vue';
+import VueAniNumber from 'vue-ani-number'
+
+createApp(App).use(VueAniNumber).mount('#app');
 ```
-yarn lint
+
+* animation would be triggered by number changes
+
+``` html
+<template>
+  <vue-ani-number :number="number" />
+</template>
+```
+
+``` js
+export default {
+  name: "App",
+  data() {
+    return {
+      number: 0
+    }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      this.number = 88888
+      window.setTimeout(() => {
+        this.number = 545876
+      }, 5000)
+    })
+  }
+};
+
 ```
 
 ### Customize configuration
